@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+<head>
+<title>Arjun Olachery</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="layer0"></div>
+
+<div id="container" class="col-lg-12 col-sm-12"><br><br>
+<center>
+<div id="head" class="col-lg-3 col-sm-12"><img src="profile.jpg" class="rounded-circle img-fluid profilepic"></div>
+</center>
+</div>
+
+
+<div id="main">
+<center><div class="col-lg-6"><br><h4 class="me"> Hi there! I am Arjun Olachery, a Computer Science (B.Tech) student at VIT
+  who loves to build stuff from scratch to perfection, just like this site. </h4></><br><br><br><h1>^</h1>
+</div>
+</center>
+</div>
+
+<br>
+
+
+<div id="mainbelow" style="top:0;text-align:center; width:100%;">
+<br><br>
+<center><h3>Top Projects</h3></center>
+<div class="container-fluid">
+  <div class="row">
+<div class="col-lg-3 centerify">
+  <!--<span class="coverLButton" style="border:thick solid black;"><h1><small><br> &lt; <br></small></h1></span>-->
+  <button class="button button4" onclick="previousimage()"><h2><small>&lt;</small></h2></button>
+  <!--<button class="lbuttonvsocial"></button>-->
+</div>
+<div class="col-lg-6">
+<span id="imgsrcframe"><img src="pic1.png" width="100%"></span>
+<h4><small><span id="imgtext">Vsocial: A social network exclusive to students at VIT University</span></small></h4>
+</div>
+<div class="col-lg-3 centerify">
+<!--<span class="coverRButton"><h1><small>&gt;</small></h1></span>-->
+<button class="button button4" onclick="nextimage()"><h2><small>&gt;</small></h2></button>
+</div>
+</div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+
+<div class="col-lg-12">
+<h3> Papers [for publication]</h3>
+ <ul>
+<li></li>
+<li></li>
+<li></li>
+
+ </ul>
+</div>
+
+</div>
+</div>
+
+
+</div>
+
+<div id="under" style="visibility:hidden;">
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+hi<br>
+
+</div>
+
+<script>
+var flag=0;
+var heightWindow=$(window).height();
+//alert(heightWindow);
+heightWindow1=heightWindow+'px';
+//$('#layer0').height(heightWindow1);
+$('#layer0').height(heightWindow1);
+$('#titleProjects').hide();
+$('#mainbelow').css({'top':heightWindow1});
+  $(window).scroll(function() {
+      /*var valueScroll = $(this).scrollTop();
+      alert(valueScroll);
+      $('.me').html(valueScroll);
+          $('#cover').css({
+              bottom:valueScroll+'px';
+          });*/
+
+          var valueScroll = $(this).scrollTop();
+          var valueScroll1=valueScroll;
+          /*if(valueScroll>heightWindow)
+          {
+            flag=1;
+            $('#cover').css({'display':'none'});
+            $('#under').css({'display':'none'});
+            $('#layer0').hide();
+            $('#mainbelow').css({'top':0})
+            $('#titleProjects').fadeIn(2500);
+            //$('#titleProjects').addClass("w3-container w3-center w3-animate-top");
+            //$('#mainbelow').css({'display':'block'})
+          }*/
+          if(flag==0)
+          {
+          valueScroll='-'+valueScroll+'px';
+          var difffunc=heightWindow-valueScroll1;
+          difffunc=valueScroll1/heightWindow;
+          difffunc=1-difffunc;
+          //alert(difffunc);
+          $('#cover').css({
+            'top':valueScroll,
+            'opacity':difffunc
+          });
+          difffunc2=difffunc;
+          difffunc2=difffunc2/10;
+          $('#layer0').css({
+            'opacity':difffunc2
+          });
+          var val2=heightWindow-valueScroll1;
+          val2=val2+'px';
+          difffunc=1-difffunc;
+          $('#mainbelow').css({'top':val2,'opacity':difffunc})
+          }
+
+  });
+</script>
+
+<script>
+var count=0;
+function nextimage(){
+  //alert("next");
+  count++;
+  pickimage(count);
+}
+function previousimage(){
+  //alert("previous");
+  count--;
+  pickimage(count);
+}
+var numberimg;
+function pickimage(numberimg){
+  if(numberimg==3)
+  {
+    count=0;
+  }
+  if(numberimg==-1)
+  {
+    count=2;
+  }
+  numberimg=count;
+  //alert(numberimg);
+  replaceimg(numberimg);
+}
+var imgsrc;
+var imgdesc;
+function replaceimg(numberimg){
+  switch(numberimg){
+    case 0:
+    imgsrc='pic1.png';
+    imgdesc='Vsocial: A social network exclusive to students at VIT University';
+    break;
+    case 1:
+    imgsrc='pic2.png';
+    imgdesc='An Arduino based drone';
+    break;
+    case 2:
+    imgsrc='pic3.png';
+    imgdesc='A Multi-purpose vehicle';
+    break;
+    default:
+    break;
+  }
+  //alert(imgdesc);
+
+  $("#imgsrcframe").fadeOut();
+  $("#imgtext").fadeOut();
+
+  setTimeout(function()
+  {
+    $("#imgsrcframe").html("<img src='"+imgsrc+"' width='100%'>");
+    $("#imgtext").html(imgdesc);
+    $("#imgsrcframe").fadeIn();
+    $("#imgtext").fadeIn();
+    //do something special
+  }, 500);
+
+  //document.getElementById('imgtext').html = imgdesc; //WORKS FINE
+  //var imgtext1 = getElementById('');
+  //imgtext1.value("hello");
+  //imgsrcframe
+  //imgtext
+}
+
+</script>
+
+</html>
